@@ -99,7 +99,7 @@ def checkLicense (path, _date=None):
     return license_flag
     
 def employeesDataFrame():
-    # Excell document with all employees names and employee numbers. This is the easiest and the fastest was to allow employee list modifications.
+    # Excell document with all employees names and employee numbers. This is the easiest and the fastest way to allow employee list modifications.
     path = os.path.expanduser('~\employees.xlsx')
     df = pd.read_excel(path)
     df.columns = ['code', 'name']
