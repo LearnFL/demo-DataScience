@@ -11,9 +11,9 @@ import numpy as np
 
 model = pd.read_excel(r"C:\Users\......\growth-model.xlsx")
 data_eval = pd.read_excel(r"C:\Users\......\data.xlsx")
-model_col_to_drop = [] # Enter columns that you need dropped
-model_col_drop_answers = "g_rate_bin"
-hot_encod_col = 'stats'
+model_col_to_drop = ["COLUMNS_THAT_YOU_NEED_DROPPED"] 
+model_col_drop_answers = "NAME_OF_THE_COLUMN_THAT_HAS_ANSWERS"
+hot_encod_col = 'COLLUMN_THAT_NEEDS_HOT_ENCODED'
 model_target = model_col_drop_answers
 
 model = pd.DataFrame(model)
@@ -77,7 +77,7 @@ print(f"Predicted KNN: {knn_predicted}")
 print(f"Expected KNN: {knn_expected}")
 print(f"{knn.score(X_test,y_test):.2%}")
 
-with open(r"C:\Users\rotnovd\OneDrive - Sawyer Technical Materials, LLC\Desktop\Classification.txt", 'w') as txt:
+with open(r"C:\Users\...........Desktop\Classification.txt", 'w') as txt:
     txt.write("Model Training And Fitting \n")
     txt.write("GaussianNB is the best for Quality\n")
     txt.write("\n")
