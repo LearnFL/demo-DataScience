@@ -1,6 +1,6 @@
 # DEMO OF SOME OF THE DATA SCIENCE RELATED JOBS
 
-#### <a href="https://www.dennisrotnov.com" target='_blank' >Please visit author's website</a>
+#### [Visit author's wensite](https://www.dennisrotnov.com){:target="_blank"}
 
 #### All proprietary data has been removed and modifications have been made to simulate original project.
 | File | DESCRIPTION |
