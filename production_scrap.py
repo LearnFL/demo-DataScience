@@ -1,7 +1,8 @@
 '''
 This software cleans production data and calculates scrap.
 Licence Key implementation is basic and not intendent to substetute propper implementation of a license key.
-Feel free to reuse should it work in your environment, but please keep Authorship Attribution  
+
+ALL RIGHTS RESERVED
 '''
 
 from tkinter import ttk
