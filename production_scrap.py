@@ -1,3 +1,9 @@
+'''
+This software cleans production data and calculates scrap.
+Licence Key implementation is basic and not intendent to substetute propper implementation of a license key.
+Feel free to reuse should it work in your environment, but please keep Authorship Attribution  
+'''
+
 from tkinter import ttk
 import tkinter as tk
 from tkinter.filedialog import askopenfilename
@@ -18,7 +24,7 @@ class Error(Exception):
     pass
 
 class EmployeeFileNotFound(Error):
-    def __init__(self, message="Employee file not found. MAke sure the file is in the same folder with the license key"):
+    def __init__(self, message="Employee file not found. Make sure the file is in the same folder with the license key"):
         self.message = message
         super().__init__(self.message)
 
@@ -35,7 +41,7 @@ class EmployeeIterError(Error):
 # WINDOW SETUP
 
 root = tk.Tk()
-root.title('\u00a9 Dennis Rotnov')
+root.title('\u00a9 YOUR NAME')
 root.geometry('500x400+100+50')
 root.resizable(False, False)
 
@@ -49,7 +55,7 @@ def save_license (path, l_key, win2):
     except:
         raise SaveLiceseKeyError
 
-def enterLicense (path):
+def enterLicense(path):
     win2 = Toplevel()
     win2.title('License')
     win2.geometry("250x200")
@@ -66,7 +72,6 @@ def checkLicense (path, _date=None):
     if not os.path.exists(path): 
         license_flag = 0
         enterLicense(path)  
-
     else:
         try: 
             with open(path+'/license-key.txt', 'r') as f:
@@ -80,6 +85,7 @@ def checkLicense (path, _date=None):
                 b = 'YOUR_LICENSE_LOGIC'
                 c = 'YOUR_LICENSE_LOGIC'
                 print(a, b ,c)
+                
                 if ('YOUR_LICENSE_LOGIC'):
                     license_flag = 1
                 else:
@@ -87,12 +93,12 @@ def checkLicense (path, _date=None):
                     mb.showerror(title="License", message="License Error.")
                     enterLicense(path)  
         except:
-            mb.showerror(title="Error", message="Error. Reenter license key. If the problem persists contact Dennis Rotnov.")
+            mb.showerror(title="Error", message="Error. Reenter license key. If the problem persists contact YOUR NAME.")
             enterLicense(path)
-
     return license_flag
     
 def employeesDataFrame():
+    # File with all employees and their numbers
     path = os.path.expanduser('~\employees.xlsx')
     df = pd.read_excel(path)
     df.columns = ['code', 'name']
@@ -111,7 +117,6 @@ def numberToname(x):
         name = person.get(x, 'NO NAME')
     except KeyError:
         name = x
-
     return name
 
 def upload(_date=None):
@@ -131,13 +136,8 @@ def upload(_date=None):
             file_transaction_path = file_path
 
             SCRAP_DICT = {
-                "1BR": 'Broken',
-                "1CK":  "Cracking",
-                "1CP": "Chips",
-                "1FE": "File",
-                "1US": "Undersized",
-                "1TP": "Taper",
-                "1CH": "Chamfer"
+                "code1": 'reason1',
+                "code2": 'reason2'
             }
 
             try:
@@ -165,10 +165,10 @@ def upload(_date=None):
                 
                 # df clean up, eliminates extra zeros from job numbers
                 def job_cleanup(x):
-                    if x[0].upper() == 'W':
-                        x = ''.join([x[0],x[6:]]) 
-                    elif ((x[0].upper() == "F") or (x[0].upper() == "D")):
-                        x = ''.join([x[0:4], x[7:]])
+                    if x[0].upper() == 'P':
+                        x = ''.join([x[1],x[5:]]) 
+                    elif ((x[0].upper() == "K") or (x[0].upper() == "V")):
+                        x = ''.join([x[2:4], x[6:]])
                     else:
                         x = x 
                     return x
@@ -207,7 +207,7 @@ def upload(_date=None):
 
             try:
                 print(df_transaction)
-                save_path = os.path.expanduser('~\OneDrive - Sawyer Technical Materials, LLC\Desktop\Scrap.xlsx')
+                save_path = os.path.expanduser('~\Desktop\Scrap.xlsx')
             
             except:
                 mb.showinfo(title = "Saving Error", message = "Error while saving file on your desktop. Make sure your have permissions to write to the hard drive. Close the program and try again.") 
