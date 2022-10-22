@@ -10,3 +10,4 @@ To demonstrate professional skills. [Visit author's website.](https://www.dennis
 |production_scrap.py|Modifies ERP's report, removes, reorganizes, substitutes data. License Key implementation is basic for development stage.</br> `LICENSE: ALL RIGHTS RESERVED.`|
 |temperature_analysis.py|Cleans, analizes great volume of contenious data.</br> `LICENSE: ALL RIGHTS RESERVED.`
 |internal_link_crawler.py|Looks for article titles of interest.|
+|schedule.py|Small Dash project to help visualize production jobs.|
