@@ -265,14 +265,14 @@ redFlagDict = {
 df = df.astype({'DateTime': 'datetime64[ns]', 'Diss': 'float64','Top':'float64','TD':'float64'})
 
 # Creates date ranges for temperature ramp plot
-a45 = df[df.DateTime.between((start_date - timedelta(days=-1)),(start_date - timedelta(days=-10)))].copy()
-a90 = df[df.DateTime.between((start_date - timedelta(days=-10)),(start_date - timedelta(days=-20)))].copy()
-a135 = df[df.DateTime.between((start_date - timedelta(days=-20)),(start_date - timedelta(days=-30)))].copy()
-a180 = df[df.DateTime.between((start_date - timedelta(days=-30)),(start_date - timedelta(days=-40)))].copy()
-a225 = df[df.DateTime.between((start_date - timedelta(days=-40)),(start_date - timedelta(days=-50)))].copy()
-a270 = df[df.DateTime.between((start_date - timedelta(days=-50)),(start_date - timedelta(days=-60)))].copy()
-a315 = df[df.DateTime.between((start_date - timedelta(days=-60)),(start_date - timedelta(days=-70)))].copy()
-a360 = df[df.DateTime.between((start_date - timedelta(days=-70)),(start_date - timedelta(days=-80)))].copy()
+a10 = df[df.DateTime.between((start_date - timedelta(days=-1)),(start_date - timedelta(days=-10)))].copy()
+a20 = df[df.DateTime.between((start_date - timedelta(days=-10)),(start_date - timedelta(days=-20)))].copy()
+a30 = df[df.DateTime.between((start_date - timedelta(days=-20)),(start_date - timedelta(days=-30)))].copy()
+a40 = df[df.DateTime.between((start_date - timedelta(days=-30)),(start_date - timedelta(days=-40)))].copy()
+a50 = df[df.DateTime.between((start_date - timedelta(days=-40)),(start_date - timedelta(days=-50)))].copy()
+a60 = df[df.DateTime.between((start_date - timedelta(days=-50)),(start_date - timedelta(days=-60)))].copy()
+a70 = df[df.DateTime.between((start_date - timedelta(days=-60)),(start_date - timedelta(days=-70)))].copy()
+a80 = df[df.DateTime.between((start_date - timedelta(days=-70)),(start_date - timedelta(days=-80)))].copy()
 
 listOfRamp = [a10, a20, a30, a40, a50, a60, a70, a80]
 df_flagged = pd.DataFrame(columns=["DateTime", 'Diss', 'Top', 'TD']).set_index('DateTime',drop=False)
