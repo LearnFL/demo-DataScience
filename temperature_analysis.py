@@ -542,7 +542,7 @@ def plot80(x:float):
     b = plt.plot([a80["DateTime"].values[1],a80["DateTime"].values[-1]], [x[7] + 0.5, x[8] + 0.5], 'k:',color="r", lw=1) 
     return a, b
 
-func_list = [plot15, plot20, plot30, plot40, plot50, plot60, plot70, plot80]
+func_list = [plot10, plot20, plot30, plot40, plot50, plot60, plot70, plot80]
 
 class Plotter:
     def __init__(self, func_list):
