@@ -4,4 +4,5 @@
 | File | DESCRIPTION |
 |-----|-------------|
 |classification_model.py|Implements classification model to determine growth rate and/or quality|
-|production_scrap.py|Modifies ERP's report, removes unnecessary data, reorgonizes data, substetutes data.
+|production_scrap.py|Modifies ERP's report, removes unnecessary data, reorganizes data, substitutes data.
+License Key implementation is basic, works for testing and development stages..
