@@ -4,3 +4,4 @@
 | File | DESCRIPTION |
 |-----|-------------|
 |classification_model.py|Implements classification model to determine growth rate and/or quality|
+|production_scrap.py|Modifies ERP's report, removes unnecessary data, reorgonizes data, substetutes data.
