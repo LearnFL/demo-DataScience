@@ -1,4 +1,4 @@
-# DEMO OF SOME OF THE DATA SCIENCE RELATED JOBS
+# DEMO OF DATA SCIENCE RELATED JOBS
 
 ### Purpose
 To demonstrate professional skills. [Visit author's website.](https://www.dennisrotnov.com)
