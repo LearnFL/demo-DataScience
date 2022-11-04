@@ -1,7 +1,7 @@
 # DEMO OF DATA SCIENCE RELATED JOBS
 
 ### Purpose
-To demonstrate Data Science related skills. [Visit author's website.](https://www.dennisrotnov.com)
+Demo. [Visit author's website.](https://www.dennisrotnov.com)
 
 #### All proprietary data has been removed and modifications have been made to simulate original project.
 | File | DESCRIPTION |
